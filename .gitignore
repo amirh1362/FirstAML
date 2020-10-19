@@ -1,0 +1,6 @@
+
+*.dll
+*.pdb
+*.cache
+*.txt
+Order/obj/Order.csproj.nuget.dgspec.json
