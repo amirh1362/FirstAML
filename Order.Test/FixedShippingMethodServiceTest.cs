@@ -25,6 +25,8 @@ namespace Order.Test
         [InlineData(Size.Medium,3, 8)]
         [InlineData(Size.Large,8, 19)]
         [InlineData(Size.Xl,11, 27)]
+        [InlineData(Size.Xll, 100, 100)]
+
         public void Should_ReturnExpectedCost_When_FixDeliverCostWithWeight(Size size, decimal weigth, decimal expectedValue)
         {
             var fixedShipping = new FixedShippingMethodService();
@@ -33,5 +35,7 @@ namespace Order.Test
             userService.ProcessOrder();
             Assert.Equal(userService.TotalCost, expectedValue);
         }
+
+
     }
 }

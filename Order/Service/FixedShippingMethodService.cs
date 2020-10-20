@@ -22,8 +22,14 @@ namespace Order.Service
         {
             decimal cost = 0;
             decimal maxWeight = 0;
+            decimal defaultAdditionalCost = 2;
             switch (userOrderItem.ShippingDetail.ParcelSize)
             {
+                case Size.Xll:
+                    cost = 50;
+                    maxWeight = 50;
+                    defaultAdditionalCost = 1;
+                    break;
                 case Size.Xl:
                     cost = 25;
                     maxWeight = 10;
@@ -41,16 +47,16 @@ namespace Order.Service
                     maxWeight = 1;
                     break;
             }
-            userOrderItem.ShippingDetail.Cost = cost+ CalculateAdditionalCost(maxWeight, userOrderItem.ShippingDetail.Weight);
+            userOrderItem.ShippingDetail.Cost = cost+ CalculateAdditionalCost(maxWeight, userOrderItem.ShippingDetail.Weight, defaultAdditionalCost);
             return userOrderItem;
         }
 
-        private decimal CalculateAdditionalCost(decimal maxWeight, decimal weigth)
+        private decimal CalculateAdditionalCost(decimal maxWeight, decimal weigth, decimal defaultAdditionalCost)
         {
             decimal difference = weigth - maxWeight;
             if (difference <= 0)
                 return 0;
-            return difference * 2;
+            return difference * defaultAdditionalCost;
         }
     }
 }
