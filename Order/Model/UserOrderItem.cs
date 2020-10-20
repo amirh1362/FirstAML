@@ -6,7 +6,7 @@ namespace Order.Model
 {
     public enum Size
     {
-        Small,Medium,Large,Xl
+        None,Small,Medium,Large,Xl
     }
     public class UserOrderItem
     {

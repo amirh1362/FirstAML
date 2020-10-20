@@ -17,7 +17,7 @@ namespace Order.Service
 
             var userItem = new UserOrderItem(cost)
             {
-                ShippingDetail = new ShippingDetail()
+                ShippingDetail = new ShippingDetail(Size.None,0)
                 {
                     Cost = cost
                 }
