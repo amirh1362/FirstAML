@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Order.Interface;
 using Order.Model;
 using Order.Service;
 using Xunit;
@@ -15,7 +16,7 @@ namespace Order.Test
         {
             var fixedShipping = new FixedShippingMethodService();
             var userItems = new List<UserOrderItem>() {new UserOrderItem() { ShippingDetail = new ShippingDetail(size,0) { ParcelSize = size } }};
-            var userService = new UserOrderService(userItems, fixedShipping);
+            var userService = new UserOrderService(userItems, fixedShipping,new DiscountService());
             userService.ProcessOrder();
             Assert.Equal(userService.TotalCost,expectedValue);
         }
@@ -31,7 +32,7 @@ namespace Order.Test
         {
             var fixedShipping = new FixedShippingMethodService();
             var userItems = new List<UserOrderItem>() { new UserOrderItem() { ShippingDetail = new ShippingDetail(size, weigth) } };
-            var userService = new UserOrderService(userItems, fixedShipping);
+            var userService = new UserOrderService(userItems, fixedShipping, new DiscountService());
             userService.ProcessOrder();
             Assert.Equal(userService.TotalCost, expectedValue);
         }

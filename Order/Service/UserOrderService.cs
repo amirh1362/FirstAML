@@ -10,19 +10,22 @@ namespace Order.Service
     public class UserOrderService: IUserOrderService
     {
         private readonly IShippingMethod _shippingMethod;
+        private readonly IDiscountCalculator _discountCalculator;
 
         private List<UserOrderItem> _orders;
 
         public decimal TotalCost { get; set; }
-        public UserOrderService(List<UserOrderItem> orders,IShippingMethod shippingMethod)
+        public UserOrderService(List<UserOrderItem> orders,IShippingMethod shippingMethod, IDiscountCalculator discountCalculator)
         {
             _shippingMethod = shippingMethod;
             _orders = orders;
+            _discountCalculator = discountCalculator;
         }
 
         public void ProcessOrder()
         {
-            _orders =_shippingMethod.Calculate(_orders);
+            _shippingMethod.Calculate(_orders);
+            _discountCalculator.Calculate(_orders);
             this.TotalCost = TotalShippingCost(_orders.ToList());
         }
 

@@ -17,7 +17,7 @@ namespace Order.Test
             };
             var fastShipping = new FastShippingMethodService();
             ;
-            var userService = new UserOrderService(orderLines, fastShipping);
+            var userService = new UserOrderService(orderLines, fastShipping, new DiscountService());
             userService.ProcessOrder();
             Assert.Equal(userService.TotalCost, 10);
             Assert.Equal(userService.NumberOfLines(), 2);
@@ -33,7 +33,7 @@ namespace Order.Test
             };
             var fastShipping = new FastShippingMethodService();
             ;
-            var userService = new UserOrderService(orderLines, fastShipping);
+            var userService = new UserOrderService(orderLines, fastShipping, new DiscountService());
             userService.ProcessOrder();
             Assert.Equal(userService.TotalCost, 30);
             Assert.Equal(userService.NumberOfLines(), 3);
