@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order\\Order.csproj",
+      "projectUniqueName": "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order\\Order.csproj",
       "projectName": "Order",
-      "projectPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order\\Order.csproj",
+      "projectPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order\\Order.csproj",
       "packagesPath": "C:\\Users\\Amir.Paziraee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order\\obj\\",
+      "outputPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

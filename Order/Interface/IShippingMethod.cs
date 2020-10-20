@@ -7,7 +7,7 @@ namespace Order.Interface
 {
     public interface IShippingMethod
     {
-        ShippingDetail Calculate(Model.UserOrder userOrder);
+        List<UserOrderItem> Calculate(List<UserOrderItem> userOrderItem);
     }
     
     

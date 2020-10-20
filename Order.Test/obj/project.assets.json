@@ -3493,11 +3493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order.Test\\Order.Test.csproj",
+      "projectUniqueName": "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order.Test\\Order.Test.csproj",
       "projectName": "Order.Test",
-      "projectPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order.Test\\Order.Test.csproj",
+      "projectPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order.Test\\Order.Test.csproj",
       "packagesPath": "C:\\Users\\Amir.Paziraee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order.Test\\obj\\",
+      "outputPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3516,8 +3516,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order\\Order.csproj": {
-              "projectPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AML\\AMLCode.Test\\Order\\Order.csproj"
+            "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order\\Order.csproj": {
+              "projectPath": "C:\\Users\\Amir.Paziraee\\source\\repos\\AMLTest\\FirstAML\\Order\\Order.csproj"
             }
           }
         }

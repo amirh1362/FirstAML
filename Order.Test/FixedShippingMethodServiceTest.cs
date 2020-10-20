@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Order.Model;
 using Order.Service;
 using Xunit;
@@ -13,11 +14,10 @@ namespace Order.Test
         public void Should_ReturnExpectedCost_When_FixDeliverCost(Size size,decimal expectedValue)
         {
             var fixedShipping = new FixedShippingMethodService();
-            ShippingDetail shippingDetail = fixedShipping.Calculate(new UserOrder()
-            {
-                ParcelSize = size
-            });
-            Assert.Equal(shippingDetail.Cost,expectedValue);
+            var userItems = new List<UserOrderItem>() {new UserOrderItem() { ShippingDetail = new ShippingDetail() { ParcelSize = size } }};
+            var userService = new UserOrderService(userItems, fixedShipping);
+            userService.ProcessOrder();
+            Assert.Equal(userService.TotalCost,expectedValue);
         }
     }
 }

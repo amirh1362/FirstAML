@@ -1,14 +1,26 @@
-﻿using Order.Interface;
+﻿using System.Collections.Generic;
+using Order.Interface;
 using Order.Model;
 
 namespace Order.Service
 {
     public class FixedShippingMethodService : IShippingMethod
     {
-        public ShippingDetail Calculate(UserOrder userOrder)
+        public List<UserOrderItem> Calculate(List<UserOrderItem> userOrderItems)
+        {
+
+            foreach (var userOrderItem in userOrderItems)
+            {
+                GetParcelCost(userOrderItem);
+            }
+
+            return userOrderItems;
+        }
+
+        private UserOrderItem GetParcelCost(UserOrderItem userOrderItem)
         {
             decimal cost = 0;
-            switch (userOrder.ParcelSize)
+            switch (userOrderItem.ShippingDetail.ParcelSize)
             {
                 case Size.Xl:
                     cost = 25;
@@ -23,7 +35,9 @@ namespace Order.Service
                     cost = 3;
                     break;
             }
-            return new ShippingDetail(){ Cost = cost};
+
+            userOrderItem.ShippingDetail.Cost = cost;
+            return userOrderItem;
         }
     }
 }

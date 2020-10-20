@@ -4,3 +4,11 @@
 *.cache
 *.txt
 Order/obj/Order.csproj.nuget.dgspec.json
+.vs/AMLCode.Test/DesignTimeBuild/.dtbcache.v2
+.vs/AMLCode.Test/DesignTimeBuild/.dtbcache
+.vs/AMLCode.Test/v15/Server/sqlite3/db.lock
+.vs/AMLCode.Test/v15/Server/sqlite3/storage.ide
+.vs/AMLCode.Test/v15/Server/sqlite3/storage.ide-shm
+.vs/AMLCode.Test/v15/Server/sqlite3/storage.ide-wal
+.vs/AMLCode.Test/v16/TestStore/0/000.testlog
+.vs/AMLCode.Test/v16/TestStore/0/testlog.manifest

@@ -6,6 +6,7 @@ namespace Order.Model
 {
     public class ShippingDetail
     {
+        public Size ParcelSize { get; set; }
         public decimal Cost { get; set; }
     }
 }
